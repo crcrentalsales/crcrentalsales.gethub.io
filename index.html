@@ -1,0 +1,96 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Car Rental Booking</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: lightblue;
+            padding: 20px;
+        }
+        .form-container {
+            max-width: 600px;
+            margin: 0 auto;
+            background: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        input, select, textarea {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+        }
+        label {
+            font-weight: bold;
+        }
+        .submit-btn {
+            background-color: #008cba;
+            color: white;
+            padding: 10px 15px;
+            border: none;
+            cursor: pointer;
+        }
+        .submit-btn:hover {
+            background-color: #005f6b;
+        }
+    </style>
+</head>
+<body>
+
+<div class="form-container">
+    <h1>Car Rental Booking</h1>
+    <form action="/submit_booking" method="post" enctype="multipart/form-data">
+        <label for="first-name">First Name:</label>
+        <input type="text" id="first-name" name="first_name" required>
+
+        <label for="last-name">Last Name:</label>
+        <input type="text" id="last-name" name="last_name" required>
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
+
+        <label for="phone">Phone:</label>
+        <input type="tel" id="phone" name="phone" required>
+
+        <label for="pickup-date">Pick-Up Date:</label>
+        <input type="date" id="pickup-date" name="pickup_date" required>
+
+        <label for="pickup-time">Pick-Up Time:</label>
+        <input type="time" id="pickup-time" name="pickup_time" required>
+
+        <label for="return-date">Return Date:</label>
+        <input type="date" id="return-date" name="return_date" required>
+
+        <label for="return-time">Return Time:</label>
+        <input type="time" id="return-time" name="return_time" required>
+
+        <label for="location">Pick-Up Location:</label>
+        <select id="location" name="location" required>
+            <option value="Georgetown">Georgetown</option>
+            <option value="Countryside Savannah">Countryside Savannah</option>
+        </select>
+
+        <label for="license-front">Upload Driver's License (Front):</label>
+        <input type="file" id="license-front" name="license_front" accept="image/*">
+
+        <label for="license-back">Upload Driver's License (Back):</label>
+        <input type="file" id="license-back" name="license_back" accept="image/*">
+
+        <label for="comments">Comments:</label>
+        <textarea id="comments" name="comments" rows="4"></textarea>
+
+        <label for="signature">E-Signature:</label>
+        <input type="text" id="signature" name="signature" required>
+
+        <button type="submit" class="submit-btn">Submit</button>
+    </form>
+</div>
+
+</body>
+</html>
